@@ -6,6 +6,7 @@ Deployed as a standalone Railway service from the compassIssues repo.
 
 import os
 import re
+import calendar
 from collections import defaultdict
 from flask import Flask, send_from_directory, render_template_string, redirect, abort
 
@@ -18,10 +19,11 @@ MONTH_NAMES = [
     "July", "August", "September", "October", "November", "December"
 ]
 
+LOGO_URL = "/static/Compass800.png"
 
 @app.route("/")
 def index():
-    """Archive index — grouped by year and month."""
+    """Archive index — grouped by year and month, with calendar dropdowns."""
     if not os.path.exists(ISSUES_DIR):
         editions = {}
     else:
@@ -31,16 +33,12 @@ def index():
             and "teaser" not in f and "snippet" not in f
         ], reverse=True)
 
-        editions = defaultdict(lambda: defaultdict(list))
+        editions = defaultdict(lambda: defaultdict(dict))
         for f in files:
             date_str = f.replace("compass_", "").replace(".html", "")
             try:
                 year, month, day = date_str.split("-")
-                editions[int(year)][int(month)].append({
-                    "date": date_str,
-                    "day": int(day),
-                    "label": f"{MONTH_NAMES[int(month)]} {int(day)}",
-                })
+                editions[int(year)][int(month)][int(day)] = date_str
             except ValueError:
                 continue
 
@@ -50,6 +48,18 @@ def index():
         }
 
     has_editions = any(editions.get(y) for y in editions)
+
+    # Build calendar data per year/month
+    cal_data = {}
+    for year, months in editions.items():
+        cal_data[year] = {}
+        for month_num, days_dict in months.items():
+            c = calendar.monthcalendar(year, month_num)
+            cal_data[year][month_num] = {
+                "weeks": c,
+                "has_edition": set(days_dict.keys()),
+                "date_map": days_dict,
+            }
 
     return render_template_string("""
 <!DOCTYPE html>
@@ -77,10 +87,10 @@ def index():
       gap: 16px;
     }
     .logo-img {
-      width: 120px;
+      width: 160px;
       height: auto;
-      /* Tint black PNG to navy #1B3A6B */
-      filter: brightness(0) saturate(100%) invert(18%) sepia(52%) saturate(742%) hue-rotate(185deg) brightness(90%) contrast(95%);
+      background: #F7F5F0;
+      mix-blend-mode: multiply;
     }
     .brand-tagline {
       font-family: 'DM Mono', monospace;
@@ -104,7 +114,7 @@ def index():
     }
     .latest-btn:hover { background: #162f58; }
 
-    /* ── ARCHIVE GRID ── */
+    /* ── CONTENT ── */
     .content {
       max-width: 960px;
       margin: 0 auto;
@@ -123,84 +133,93 @@ def index():
       padding-bottom: 16px;
     }
 
-    /* 3 columns fixed */
-    .months-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-
-    /* Each month is a collapsible accordion panel */
-    .month-block {
-      border: 1px solid #E0DDD6;
-      border-right: none;
-      border-bottom: none;
-    }
-    .month-block:nth-child(3n) {
-      border-right: 1px solid #E0DDD6;
-    }
-    /* Bottom border on last row */
-    .months-grid .month-block:nth-last-child(-n+3) {
-      border-bottom: 1px solid #E0DDD6;
-    }
-
-    .month-toggle {
-      width: 100%;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 16px 20px;
+    /* ── MONTH BUTTONS ── */
+    .months-row {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-align: left;
-      background: #F7F5F0;
-      transition: background 0.15s;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
     }
-    .month-toggle:hover { background: #EFECE6; }
+    .month-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1B3A6B;
+      background: none;
+      border: 1px solid #1B3A6B;
+      padding: 8px 20px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .month-btn:hover, .month-btn.active {
+      background: #1B3A6B;
+      color: #fff;
+    }
 
-    .month-name {
+    /* ── CALENDAR ── */
+    .calendar-container {
+      display: none;
+      margin-bottom: 8px;
+    }
+    .calendar-container.open { display: block; }
+
+    .calendar-wrap {
+      background: #fff;
+      border: 1px solid #E0DDD6;
+      padding: 20px 24px 16px;
+      display: inline-block;
+    }
+    .cal-header {
       font-family: 'DM Mono', monospace;
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #6B6860;
+      margin-bottom: 14px;
     }
-    .month-count {
+    .cal-grid {
+      border-collapse: collapse;
+    }
+    .cal-grid th {
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: #9B9890;
+      font-size: 9px;
       letter-spacing: 1px;
-    }
-    .month-arrow {
-      font-size: 10px;
+      text-transform: uppercase;
       color: #9B9890;
-      transition: transform 0.2s;
-      margin-left: 8px;
-      flex-shrink: 0;
+      padding: 0 0 8px;
+      text-align: center;
+      font-weight: 400;
+      width: 36px;
     }
-    .month-block.open .month-arrow { transform: rotate(180deg); }
-
-    .month-editions {
-      display: none;
-      padding: 4px 0 12px;
-      background: #fff;
-      border-top: 1px solid #E0DDD6;
+    .cal-grid td {
+      text-align: center;
+      padding: 2px;
     }
-    .month-block.open .month-editions { display: block; }
-
-    .edition-link {
-      display: block;
+    .cal-day {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
       font-size: 13px;
       font-weight: 500;
+      border-radius: 2px;
+    }
+    .cal-day.no-edition {
+      color: #C8C5BE;
+    }
+    a.cal-day.has-edition {
       color: #1B3A6B;
+      font-weight: 600;
       text-decoration: none;
-      padding: 5px 20px;
       transition: background 0.12s;
     }
-    .edition-link:hover { background: #E8EDF5; }
+    a.cal-day.has-edition:hover {
+      background: #E8EDF5;
+    }
 
-    .empty {
+    .empty-msg {
       color: #6B6860;
       font-style: italic;
       font-size: 14px;
@@ -228,14 +247,10 @@ def index():
     }
     .footer-btn:hover { background: #162f58; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .months-grid { grid-template-columns: 1fr; }
-      .month-block { border-right: 1px solid #E0DDD6; border-bottom: none; }
-      .month-block:last-child { border-bottom: 1px solid #E0DDD6; }
+    @media (max-width: 600px) {
       .content { padding: 32px 20px; }
       .header { padding: 36px 20px 32px; }
-      .logo-img { width: 90px; }
+      .logo-img { width: 120px; }
     }
   </style>
 </head>
@@ -244,8 +259,8 @@ def index():
   <!-- HEADER -->
   <div class="header">
     <div class="header-inner">
-      <img src="/static/CompassLogoV1.png" alt="Compass" class="logo-img">
-      <div class="brand-tagline">Sports Intelligence · MLB Edition</div>
+      <img src="{{ logo_url }}" alt="Compass" class="logo-img">
+      <div class="brand-tagline">Sports Analytics · MLB Edition</div>
       {% if has_editions %}
       <a href="/latest" class="latest-btn" target="_blank" rel="noopener">Latest Edition →</a>
       {% endif %}
@@ -258,30 +273,55 @@ def index():
       {% for year, months in editions.items() %}
       <div class="year-block">
         <div class="year-heading">{{ year }}</div>
-        <div class="months-grid">
-          {% for month_num, issues in months.items() %}
-          <div class="month-block" id="month-{{ year }}-{{ month_num }}">
-            <button class="month-toggle" onclick="toggleMonth('month-{{ year }}-{{ month_num }}')">
-              <span class="month-name">{{ month_names[month_num] }}</span>
-              <span>
-                <span class="month-count">{{ issues|length }} issues</span>
-                <span class="month-arrow">▾</span>
-              </span>
-            </button>
-            <div class="month-editions">
-              {% for issue in issues %}
-              <a class="edition-link" href="/{{ issue.date }}" target="_blank" rel="noopener">
-                {{ issue.label }}
-              </a>
-              {% endfor %}
-            </div>
-          </div>
+
+        <!-- Month buttons -->
+        <div class="months-row">
+          {% for month_num in months.keys() %}
+          <button class="month-btn" onclick="toggleCal('cal-{{ year }}-{{ month_num }}', this)">
+            {{ month_names[month_num] }}
+          </button>
           {% endfor %}
         </div>
+
+        <!-- Calendar panels -->
+        {% for month_num, month_info in cal_data[year].items() %}
+        <div class="calendar-container" id="cal-{{ year }}-{{ month_num }}">
+          <div class="calendar-wrap">
+            <div class="cal-header">{{ month_names[month_num] }} {{ year }}</div>
+            <table class="cal-grid">
+              <thead>
+                <tr>
+                  <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for week in month_info.weeks %}
+                <tr>
+                  {% for day in week %}
+                  <td>
+                    {% if day == 0 %}
+                      <span class="cal-day no-edition">&nbsp;</span>
+                    {% elif day in month_info.has_edition %}
+                      <a class="cal-day has-edition"
+                         href="/{{ month_info.date_map[day] }}"
+                         target="_blank" rel="noopener">{{ day }}</a>
+                    {% else %}
+                      <span class="cal-day no-edition">{{ day }}</span>
+                    {% endif %}
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% endfor %}
+
       </div>
       {% endfor %}
     {% else %}
-      <p class="empty">No editions published yet.</p>
+      <p class="empty-msg">No editions published yet.</p>
     {% endif %}
   </div>
 
@@ -293,19 +333,32 @@ def index():
   </div>
 
   <script>
-    function toggleMonth(id) {
-      const block = document.getElementById(id);
-      block.classList.toggle('open');
+    function toggleCal(id, btn) {
+      // Close any other open calendar and deactivate its button
+      document.querySelectorAll('.calendar-container.open').forEach(el => {
+        if (el.id !== id) el.classList.remove('open');
+      });
+      document.querySelectorAll('.month-btn.active').forEach(el => {
+        if (el !== btn) el.classList.remove('active');
+      });
+      // Toggle this one
+      document.getElementById(id).classList.toggle('open');
+      btn.classList.toggle('active');
     }
 
     // Auto-open the most recent month on load
-    const firstBlock = document.querySelector('.month-block');
-    if (firstBlock) firstBlock.classList.add('open');
+    const firstBtn = document.querySelector('.month-btn');
+    const firstCal = document.querySelector('.calendar-container');
+    if (firstBtn && firstCal) {
+      firstBtn.classList.add('active');
+      firstCal.classList.add('open');
+    }
   </script>
 
 </body>
 </html>
-    """, editions=editions, has_editions=has_editions, month_names=MONTH_NAMES)
+    """, editions=editions, has_editions=has_editions, month_names=MONTH_NAMES,
+         cal_data=cal_data, logo_url=LOGO_URL)
 
 
 @app.route("/latest")
