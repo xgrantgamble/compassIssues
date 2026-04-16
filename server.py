@@ -126,7 +126,7 @@ def index():
       font-family: 'Playfair Display', serif;
       font-size: 52px;
       font-weight: 600;
-      color: #E0DDD6;
+      color: #111111;
       line-height: 1;
       margin-bottom: 28px;
       border-bottom: 1px solid #E0DDD6;
