@@ -31,7 +31,6 @@ def index():
             and "teaser" not in f and "snippet" not in f
         ], reverse=True)
 
-        # Group by year → month
         editions = defaultdict(lambda: defaultdict(list))
         for f in files:
             date_str = f.replace("compass_", "").replace(".html", "")
@@ -45,7 +44,6 @@ def index():
             except ValueError:
                 continue
 
-        # Sort years descending, months descending within year
         editions = {
             y: dict(sorted(editions[y].items(), reverse=True))
             for y in sorted(editions.keys(), reverse=True)
@@ -63,7 +61,7 @@ def index():
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',sans-serif; background:#F7F5F0; color:#111; min-height:100vh; }
+    body { font-family:'DM Sans',sans-serif; background:#F7F5F0; color:#111; min-height:100vh; display:flex; flex-direction:column; }
 
     /* ── HEADER ── */
     .header {
@@ -76,15 +74,13 @@ def index():
       display: inline-flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      font-weight: 600;
-      color: #111111;
-      letter-spacing: -0.5px;
-      line-height: 1;
+    .logo-img {
+      width: 120px;
+      height: auto;
+      /* Tint black PNG to navy #1B3A6B */
+      filter: brightness(0) saturate(100%) invert(18%) sepia(52%) saturate(742%) hue-rotate(185deg) brightness(90%) contrast(95%);
     }
     .brand-tagline {
       font-family: 'DM Mono', monospace;
@@ -92,6 +88,7 @@ def index():
       letter-spacing: 3px;
       text-transform: uppercase;
       color: #6B6860;
+      margin-top: -8px;
     }
     .latest-btn {
       display: inline-block;
@@ -103,15 +100,16 @@ def index():
       text-transform: uppercase;
       padding: 12px 28px;
       text-decoration: none;
-      margin-top: 8px;
+      margin-top: 4px;
     }
     .latest-btn:hover { background: #162f58; }
 
     /* ── ARCHIVE GRID ── */
     .content {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 52px 40px;
+      flex: 1;
     }
     .year-block { margin-bottom: 52px; }
     .year-heading {
@@ -124,31 +122,84 @@ def index():
       border-bottom: 1px solid #E0DDD6;
       padding-bottom: 16px;
     }
+
+    /* 3 columns fixed */
     .months-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 32px 40px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
     }
-    .month-block {}
+
+    /* Each month is a collapsible accordion panel */
+    .month-block {
+      border: 1px solid #E0DDD6;
+      border-right: none;
+      border-bottom: none;
+    }
+    .month-block:nth-child(3n) {
+      border-right: 1px solid #E0DDD6;
+    }
+    /* Bottom border on last row */
+    .months-grid .month-block:nth-last-child(-n+3) {
+      border-bottom: 1px solid #E0DDD6;
+    }
+
+    .month-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      background: #F7F5F0;
+      transition: background 0.15s;
+    }
+    .month-toggle:hover { background: #EFECE6; }
+
     .month-name {
       font-family: 'DM Mono', monospace;
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #6B6860;
-      margin-bottom: 10px;
     }
+    .month-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: #9B9890;
+      letter-spacing: 1px;
+    }
+    .month-arrow {
+      font-size: 10px;
+      color: #9B9890;
+      transition: transform 0.2s;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+    .month-block.open .month-arrow { transform: rotate(180deg); }
+
+    .month-editions {
+      display: none;
+      padding: 4px 0 12px;
+      background: #fff;
+      border-top: 1px solid #E0DDD6;
+    }
+    .month-block.open .month-editions { display: block; }
+
     .edition-link {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       color: #1B3A6B;
       text-decoration: none;
-      padding: 4px 0;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s;
+      padding: 5px 20px;
+      transition: background 0.12s;
     }
-    .edition-link:hover { border-bottom-color: #1B3A6B; }
+    .edition-link:hover { background: #E8EDF5; }
+
     .empty {
       color: #6B6860;
       font-style: italic;
@@ -163,13 +214,28 @@ def index():
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
     }
-    .footer-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 600;
+    .footer-btn {
+      display: inline-block;
+      background: #1B3A6B;
       color: #fff;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      text-decoration: none;
+    }
+    .footer-btn:hover { background: #162f58; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .months-grid { grid-template-columns: 1fr; }
+      .month-block { border-right: 1px solid #E0DDD6; border-bottom: none; }
+      .month-block:last-child { border-bottom: 1px solid #E0DDD6; }
+      .content { padding: 32px 20px; }
+      .header { padding: 36px 20px 32px; }
+      .logo-img { width: 90px; }
     }
   </style>
 </head>
@@ -178,16 +244,8 @@ def index():
   <!-- HEADER -->
   <div class="header">
     <div class="header-inner">
-      <svg width="40" height="40" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="17" stroke="#1B3A6B" stroke-width="1.5"/>
-        <circle cx="18" cy="18" r="3" fill="#1B3A6B"/>
-        <path d="M18 4 L20.5 16 L18 15 L15.5 16 Z" fill="#1B3A6B"/>
-        <path d="M18 32 L20.5 20 L18 21 L15.5 20 Z" fill="#E0DDD6"/>
-        <line x1="32" y1="18" x2="29" y2="18" stroke="#1B3A6B" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="4" y1="18" x2="7" y2="18" stroke="#1B3A6B" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      <div class="brand-name">Compass</div>
-      <div class="brand-tagline">Sports intelligence · MLB edition</div>
+      <img src="/static/CompassLogoV1.png" alt="Compass" class="logo-img">
+      <div class="brand-tagline">Sports Intelligence · MLB Edition</div>
       {% if has_editions %}
       <a href="/latest" class="latest-btn" target="_blank" rel="noopener">Latest Edition →</a>
       {% endif %}
@@ -202,13 +260,21 @@ def index():
         <div class="year-heading">{{ year }}</div>
         <div class="months-grid">
           {% for month_num, issues in months.items() %}
-          <div class="month-block">
-            <div class="month-name">{{ month_names[month_num] }}</div>
-            {% for issue in issues %}
-            <a class="edition-link" href="/{{ issue.date }}" target="_blank" rel="noopener">
-              {{ issue.label }}
-            </a>
-            {% endfor %}
+          <div class="month-block" id="month-{{ year }}-{{ month_num }}">
+            <button class="month-toggle" onclick="toggleMonth('month-{{ year }}-{{ month_num }}')">
+              <span class="month-name">{{ month_names[month_num] }}</span>
+              <span>
+                <span class="month-count">{{ issues|length }} issues</span>
+                <span class="month-arrow">▾</span>
+              </span>
+            </button>
+            <div class="month-editions">
+              {% for issue in issues %}
+              <a class="edition-link" href="/{{ issue.date }}" target="_blank" rel="noopener">
+                {{ issue.label }}
+              </a>
+              {% endfor %}
+            </div>
           </div>
           {% endfor %}
         </div>
@@ -221,14 +287,21 @@ def index():
 
   <!-- FOOTER -->
   <div class="footer">
-    <svg width="18" height="18" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="17" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-      <circle cx="18" cy="18" r="3" fill="rgba(255,255,255,0.8)"/>
-      <path d="M18 4 L20.5 16 L18 15 L15.5 16 Z" fill="white"/>
-      <path d="M18 32 L20.5 20 L18 21 L15.5 20 Z" fill="rgba(255,255,255,0.3)"/>
-    </svg>
-    <span class="footer-name">Compass</span>
+    <a href="https://mlb.up.railway.app/" class="footer-btn" target="_blank" rel="noopener">
+      Compass: MLB Stats Tracker →
+    </a>
   </div>
+
+  <script>
+    function toggleMonth(id) {
+      const block = document.getElementById(id);
+      block.classList.toggle('open');
+    }
+
+    // Auto-open the most recent month on load
+    const firstBlock = document.querySelector('.month-block');
+    if (firstBlock) firstBlock.classList.add('open');
+  </script>
 
 </body>
 </html>
@@ -264,7 +337,7 @@ def serve_edition(date_str):
   <style>body{font-family:sans-serif;text-align:center;padding:60px 20px;color:#333;background:#F7F5F0;}
   h1{font-family:Georgia,serif;font-size:24px;margin-bottom:12px;}p{color:#666;margin-bottom:8px;}a{color:#1B3A6B;}</style>
 </head><body>
-  <h1>⚾ Compass</h1>
+  <h1>Compass</h1>
   <p>No edition found for {{ date }}.</p>
   <p><a href="/latest">View latest edition →</a></p>
   <p><a href="/">View all editions →</a></p>
