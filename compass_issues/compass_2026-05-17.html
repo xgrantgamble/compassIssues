@@ -61,17 +61,20 @@
   }
 
   /* Batter rows — stack and constrain */
+  /* Batter rows — stack and constrain */
   .batter-row {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 1px !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
   .batter-stat {
-    margin-left: 0 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
+    margin-left: 6px !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
     max-width: 100% !important;
   }
   .hide-mobile { display: none !important; }
@@ -221,12 +224,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Gunnar Henderson</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Gunnar Henderson (SS)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">4-5 (1 HR, 2 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jeremiah Jackson</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jeremiah Jackson (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R)</span>
             </div>
             
@@ -235,7 +238,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Gunnar Henderson went 4-for-5 with a homer and 2 RBI to pace the Baltimore offense. The Orioles got the job done despite a short outing from starter Brandon Young, who only lasted 3.2 innings.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Gunnar Henderson went 4-for-5 with a homer and 2 RBI to lead Baltimore to the win. The Orioles offense came through despite the starting staff being shaky lately.</div>
           </div>
         </div>
 
@@ -254,12 +257,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">James Wood</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">James Wood (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Luis García Jr.</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Luis García Jr. (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5</span>
             </div>
             
@@ -268,7 +271,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Washington starter Richard Lovelady lasted just 1.1 innings and gave up 2 runs before the bullpen had to take over. The Nationals couldn&#39;t generate enough offense to overcome the early hole.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Washington starter Richard Lovelady lasted just 1.1 innings and gave up 2 runs before getting pulled. The bullpen couldn&#39;t hold things together in a 7-3 loss.</div>
           </div>
         </div>
 
@@ -318,17 +321,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Xavier Edwards</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Xavier Edwards (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Otto Lopez</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Otto Lopez (SS)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jakob Marsee</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jakob Marsee (CF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 BB)</span>
             </div>
             
@@ -337,7 +340,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Eury Perez ran into trouble again, giving up 5 runs on 5 hits and 4 walks in 5 innings. Miami couldn&#39;t get enough going offensively to bail him out.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Eury Perez ran into trouble again, giving up 5 runs in 5 innings with 4 walks. Miami dropped this one 6-3 despite getting multi-hit games from three different hitters.</div>
           </div>
         </div>
 
@@ -356,7 +359,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jonny DeLuca</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jonny DeLuca (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R)</span>
             </div>
             
@@ -365,7 +368,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Tampa Bay&#39;s offense has been trending up lately and came through again tonight in a 6-3 win. Drew Rasmussen kept it together for 5-plus innings to give the bullpen a manageable workload.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Tampa Bay&#39;s offense has been on a real roll lately and they backed up Drew Rasmussen with enough runs to take the 6-3 win. Rasmussen kept things mostly under control through 5-plus innings.</div>
           </div>
         </div>
 
@@ -415,12 +418,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Salvador Perez</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Salvador Perez (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-2 (1 HR, 2 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Isbel</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Isbel (CF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4</span>
             </div>
             
@@ -429,7 +432,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Stephen Kolek bounced back with a strong outing, going 6.1 innings and allowing zero runs after back-to-back rough starts. Salvador Perez did the damage with a homer and 2 RBI to give Kansas City all the runs they needed.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Stephen Kolek bounced back with 6.1 scoreless innings after a rough couple of starts, and Salvador Perez delivered the big blow with a homer and 2 RBI. Kansas City got the 2-0 win.</div>
           </div>
         </div>
 
@@ -450,7 +453,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Andre Pallante threw 6.2 innings, allowed just 1 run, and struck out 7, but the offense couldn&#39;t give him any support. St. Louis was held scoreless in a tough 2-0 loss.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">St. Louis couldn&#39;t get anything going offensively and fell 2-0 despite Andre Pallante pitching well with 7 strikeouts and just 1 run allowed in 6.2 innings.</div>
           </div>
         </div>
 
@@ -500,12 +503,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Gavin Sheets</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Gavin Sheets (LF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-3 (2 HR, 4 RBI, 2 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Ty France</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Ty France (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-4 (3 RBI)</span>
             </div>
             
@@ -514,7 +517,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Gavin Sheets went 3-for-3 with 2 homers and 4 RBI, and Ty France added 3 hits and 3 RBI as San Diego rolled to an 8-3 win. The Padres offense has been trending up lately and it showed tonight.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Gavin Sheets went 3-for-3 with 2 homers and 4 RBI to power San Diego to an 8-3 road win. The Padres offense has been trending up and showed up in a big way tonight.</div>
           </div>
         </div>
 
@@ -535,7 +538,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">George Kirby gave up 6 runs in 5.2 innings, which is a rough night for a guy who had been really sharp in his last three starts. Seattle&#39;s offense couldn&#39;t pick him up either.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">George Kirby gave up 6 runs in 5.2 innings, a rough outing after three straight solid starts to begin his recent stretch. Seattle&#39;s offense continues to be a concern.</div>
           </div>
         </div>
 
@@ -585,12 +588,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Bryson Stott</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Bryson Stott (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 3 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Alec Bohm</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Alec Bohm (3B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R)</span>
             </div>
             
@@ -599,7 +602,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Zack Wheeler was filthy, going 7 scoreless innings with 8 strikeouts and just 1 walk. This continues a run of dominant pitching from him with three straight strong starts.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Zack Wheeler was dominant again with 7 innings of shutout ball and 8 strikeouts, his third straight strong start. Bryson Stott added a homer and 3 RBI as Philly cruised 6-0.</div>
           </div>
         </div>
 
@@ -620,7 +623,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Paul Skenes had shut out opponents over his last two outings, but tonight he gave up 5 runs in 5 innings and took the loss. Pittsburgh&#39;s offense couldn&#39;t get anything going either in a 6-0 shutout.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Paul Skenes gave up 5 runs in 5 innings after back-to-back shutout outings, a real step back for the young ace. Pittsburgh&#39;s offense has been really struggling lately and couldn&#39;t bail him out.</div>
           </div>
         </div>
 
@@ -670,12 +673,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Anthony Volpe</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Anthony Volpe (SS)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (3 RBI, 2 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jazz Chisholm Jr.</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jazz Chisholm Jr. (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 R, 2 BB)</span>
             </div>
             
@@ -684,7 +687,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">The Yankees led late but couldn&#39;t hold on in a 7-6 loss to the Mets. Anthony Volpe had 2 hits, 3 RBI, and 2 walks to keep New York in it, but the bullpen couldn&#39;t finish the job.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">The Yankees bullpen let a close game slip away in a 7-6 loss to the crosstown Mets. Anthony Volpe had 3 RBI and Jazz Chisholm Jr. reached base four times but it wasn&#39;t enough.</div>
           </div>
         </div>
 
@@ -703,12 +706,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Marcus Semien</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Marcus Semien (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Mark Vientos</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Mark Vientos (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 R)</span>
             </div>
             
@@ -717,7 +720,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">The Mets walked it off in a wild one despite Freddy Peralta issuing 6 walks in 5 innings. Their starting pitching has been trending down lately, so getting this win without a clean start is a nice result.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">The Mets won a back-and-forth game 7-6 despite Freddy Peralta issuing 6 walks in 5 innings. New York&#39;s starting pitching has been trending down lately so this feels like a win they had to grind out.</div>
           </div>
         </div>
 
@@ -767,17 +770,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jake Bauers</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jake Bauers (LF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Sal Frelick</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Sal Frelick (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">William Contreras</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">William Contreras (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5</span>
             </div>
             
@@ -786,7 +789,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Milwaukee&#39;s offense has been fading lately and they couldn&#39;t get over the hump tonight, losing 5-4. The Brewers bullpen has also been trending down, which didn&#39;t help matters in a one-run game.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Milwaukee&#39;s offense has been really struggling lately and they couldn&#39;t quite get over the hump in a 5-4 loss. The bullpen, which has also been trending down, couldn&#39;t hold things late.</div>
           </div>
         </div>
 
@@ -805,17 +808,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Ryan Jeffers</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Ryan Jeffers (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 HR, 1 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kody Clemens</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kody Clemens (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (2 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Luke Keaschall</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Luke Keaschall (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 R, 1 BB)</span>
             </div>
             
@@ -824,7 +827,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Minnesota&#39;s pitching and bullpen have both been trending up a lot lately and the Twins got the job done in a 5-4 win. Ryan Jeffers homered and Kody Clemens drove in 2 to give Bailey Ober enough run support.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Minnesota&#39;s pitching has been trending up a lot lately and they backed it up with a 5-4 win. Ryan Jeffers hit a homer and Kody Clemens drove in 2 to give the bullpen enough cushion.</div>
           </div>
         </div>
 
@@ -874,17 +877,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Tucker</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Tucker (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-5 (3 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Shohei Ohtani</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Shohei Ohtani (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-5 (2 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Hyeseong Kim</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Hyeseong Kim (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 RBI, 1 BB)</span>
             </div>
             
@@ -893,7 +896,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Roki Sasaki was excellent, going 7 innings with 8 strikeouts and no walks while allowing just 1 run. Kyle Tucker and Shohei Ohtani each had 3 hits and combined for 5 RBI in a 10-1 blowout.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Roki Sasaki was sharp with 7 innings of 1-run ball and 8 strikeouts, his best outing in a while after three straight rough starts. Kyle Tucker, Shohei Ohtani, and Hyeseong Kim all had multi-hit games in a 10-1 blowout.</div>
           </div>
         </div>
 
@@ -912,7 +915,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Nolan Schanuel</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Nolan Schanuel (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R)</span>
             </div>
             
@@ -921,7 +924,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Grayson Rodriguez got rocked for 7 runs on 7 hits and 4 walks in just 3.2 innings, turning this one into a blowout early. The Angels had no answers offensively in a lopsided loss.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Grayson Rodriguez got knocked around for 7 runs in just 3.2 innings as the Angels were blown out 10-1. It was a tough night all around for LA&#39;s American League team.</div>
           </div>
         </div>
 
@@ -971,12 +974,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jake Burger</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jake Burger (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 4 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Higashioka</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Higashioka (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 3 RBI)</span>
             </div>
             
@@ -985,7 +988,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Nathan Eovaldi was dealing, tossing 7 shutout innings with 8 strikeouts in an 8-0 Texas win. Jake Burger and Kyle Higashioka each homered and combined for 7 RBI to do the heavy lifting at the plate.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Nathan Eovaldi was filthy with 7 scoreless innings and 8 strikeouts as Texas shut out Houston 8-0. Jake Burger and Kyle Higashioka each hit a homer and combined for 7 RBI.</div>
           </div>
         </div>
 
@@ -1004,7 +1007,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Zach Dezenzo</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Zach Dezenzo (LF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4</span>
             </div>
             
@@ -1013,7 +1016,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Peter Lambert gave up 5 runs in 6 innings and the Astros offense was completely shut down in an 8-0 loss. Houston got blanked at home and had almost nothing going.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Peter Lambert gave up 5 runs in 6 innings as Houston got blanked 8-0 at home. The Astros bullpen has been one of the better units lately but never even got a chance to help tonight.</div>
           </div>
         </div>
 
@@ -1063,12 +1066,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Vladimir Guerrero Jr.</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Vladimir Guerrero Jr. (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Daulton Varsho</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Daulton Varsho (CF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 RBI, 1 BB)</span>
             </div>
             
@@ -1077,7 +1080,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Kevin Gausman delivered a clean 6 innings with no runs allowed and 5 strikeouts, continuing a run of improved form for Toronto&#39;s rotation. Vladimir Guerrero Jr. homered to help Toronto pull away for a 4-1 win.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Kevin Gausman had a clean 6 innings with no runs allowed and 5 strikeouts, continuing a nice stretch for Toronto&#39;s starting staff. Vladimir Guerrero Jr. added a solo shot as the Blue Jays won 4-1.</div>
           </div>
         </div>
 
@@ -1096,7 +1099,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Dillon Dingler</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Dillon Dingler (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 BB)</span>
             </div>
             
@@ -1105,7 +1108,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Jack Flaherty gave up 4 runs in 6 innings and has now allowed 3 or more runs in three of his last three starts. Detroit&#39;s offense couldn&#39;t pick him up in a 4-1 loss.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Jack Flaherty gave up 4 runs in 6 innings, the third straight start he&#39;s allowed 3 or more runs. Detroit&#39;s offense has been quiet lately and couldn&#39;t make up the difference in a 4-1 loss.</div>
           </div>
         </div>
 
@@ -1155,17 +1158,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Corbin Carroll</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Corbin Carroll (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (2 HR, 3 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Lourdes Gurriel Jr.</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Lourdes Gurriel Jr. (LF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 HR, 2 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Gabriel Moreno</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Gabriel Moreno (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-4 (2 R, 1 BB)</span>
             </div>
             
@@ -1174,7 +1177,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Corbin Carroll went 2-for-4 with 2 homers and 3 RBI to power Arizona to an 8-6 win. The Diamondbacks offense has been trending up lately and Carroll is a big reason why.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Corbin Carroll went 2-for-4 with 2 homers and 3 RBI to lead Arizona to an 8-6 win at Coors Field. The Diamondbacks offense has been trending up lately and this was a good example of why.</div>
           </div>
         </div>
 
@@ -1193,17 +1196,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Troy Johnston</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Troy Johnston (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jake McCarthy</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jake McCarthy (CF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Karros</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Karros (3B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI)</span>
             </div>
             
@@ -1212,7 +1215,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Michael Lorenzen got hammered for 6 runs on 9 hits in 4.2 innings, continuing a bumpy stretch for Colorado&#39;s rotation. The Rockies couldn&#39;t overcome the early deficit despite a decent effort from their bats.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Michael Lorenzen got tagged for 6 runs in 4.2 innings with 9 hits and 3 walks in another rough outing. Colorado couldn&#39;t claw back despite getting hits from several guys up and down the lineup.</div>
           </div>
         </div>
 
@@ -1262,17 +1265,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Elly De La Cruz</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Elly De La Cruz (SS)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 HR, 1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Nathaniel Lowe</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Nathaniel Lowe (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Spencer Steer</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Spencer Steer (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 R)</span>
             </div>
             
@@ -1281,7 +1284,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Brady Singer got tagged for 5 runs in 4 innings and has now struggled through four straight rough starts. Cincinnati&#39;s offense couldn&#39;t do enough against Cleveland in a 10-3 loss.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Brady Singer gave up 5 runs in 4 innings and Cleveland ran away with a 10-3 win. Singer has been struggling badly in his recent starts and tonight was more of the same.</div>
           </div>
         </div>
 
@@ -1300,17 +1303,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Manzardo</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Kyle Manzardo (1B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (2 HR, 3 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Chase DeLauter</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Chase DeLauter (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 HR, 2 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Brayan Rocchio</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Brayan Rocchio (SS)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 HR, 1 RBI)</span>
             </div>
             
@@ -1319,7 +1322,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Gavin Williams bounced back with a strong 6-inning outing after back-to-back rough starts, and the Cleveland lineup feasted with Kyle Manzardo hitting 2 homers and driving in 3. The Guardians rolled 10-3.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Kyle Manzardo went 2-for-5 with 2 homers and 3 RBI as Cleveland&#39;s offense kept rolling in a 10-3 blowout. The Guardians offense has been trending up lately and it showed tonight.</div>
           </div>
         </div>
 
@@ -1369,12 +1372,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Michael Conforto</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Michael Conforto (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 3 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Alex Bregman</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Alex Bregman (3B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (2 RBI, 1 BB)</span>
             </div>
             
@@ -1383,7 +1386,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Chicago dropped a wild 9-8 game despite Michael Conforto hitting a homer and driving in 3. The Cubs bullpen has been shaky lately and couldn&#39;t protect the lead late.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Chicago&#39;s White Sox bullpen has been trending down a lot lately but they held on to beat the Cubs 9-8 in a wild one. Edgar Quero hit a homer and drove in 3, and Andrew Benintendi went 3-for-3 to lead the way.</div>
           </div>
         </div>
 
@@ -1402,12 +1405,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Edgar Quero</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Edgar Quero (C)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-5 (1 HR, 3 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Andrew Benintendi</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Andrew Benintendi (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-3 (1 RBI, 1 BB)</span>
             </div>
             
@@ -1416,7 +1419,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Edgar Quero went 3-for-5 with a homer and 3 RBI, and Andrew Benintendi was 3-for-3 to help the White Sox walk away with a 9-8 win. Both starters were rough but the CWS offense came up clutch.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">The Cubs scored 8 runs but still lost, with Colin Rea giving up 4 runs in under 5 innings and the bullpen not being able to protect the lead. Michael Conforto homered and had 3 RBI but it wasn&#39;t enough.</div>
           </div>
         </div>
 
@@ -1466,7 +1469,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Jarren Duran</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Jarren Duran (LF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5</span>
             </div>
             
@@ -1475,7 +1478,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Brayan Bello was roughed up for 7 runs on 8 hits in 5 innings and has now given up 4 or more runs in each of his last four starts. Boston&#39;s offense managed just 1 run in the 8-1 loss.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Brayan Bello has now had three rough starts in a row, this time giving up 7 runs in 5 innings as Boston got pounded 8-1. There&#39;s no other way to put it, he&#39;s been really struggling lately.</div>
           </div>
         </div>
 
@@ -1494,12 +1497,12 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Austin Riley</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Austin Riley (3B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 HR, 3 RBI)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Mike Yastrzemski</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Mike Yastrzemski (RF)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-3 (1 HR, 1 RBI, 1 BB)</span>
             </div>
             
@@ -1508,7 +1511,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Grant Holmes threw 6 clean innings to give Atlanta a strong start, and Austin Riley homered and drove in 3 to back him up. Atlanta&#39;s offense has been trending down lately so this feels like a good bounce-back result.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Austin Riley homered and drove in 3 while Grant Holmes tossed 6 shutout innings as Atlanta won 8-1. The Braves offense has been trending down lately so this was a nice bounce-back night.</div>
           </div>
         </div>
 
@@ -1558,17 +1561,17 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Luis Arraez</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Luis Arraez (2B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">3-4 (1 HR, 1 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Matt Chapman</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Matt Chapman (3B)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI, 1 BB)</span>
             </div>
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Casey Schmitt</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Casey Schmitt (DH)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-5 (1 R)</span>
             </div>
             
@@ -1577,7 +1580,7 @@
           <!-- Away insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1B3A6B;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Luis Arraez went 3-for-4 with a homer and San Francisco&#39;s offense was clicking all night in a 10-1 blowout win. The Giants offense has been trending up a lot lately and they backed Adrian Houser with plenty of run support.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Luis Arraez homered and went 3-for-4 as San Francisco&#39;s offense exploded for a 10-1 win. The Giants offense has been trending way up lately and they&#39;ve been one of the better units in baseball recently.</div>
           </div>
         </div>
 
@@ -1596,7 +1599,7 @@
           <div style="background:#EEF4FF;border-left:2px solid #1B3A6B;padding:5px 8px;margin-left:2px;overflow:hidden;max-width:100%;box-sizing:border-box;">
             
             <div class="batter-row" style="display:flex;justify-content:space-between;align-items:baseline;">
-              <span style="font-size:11px;font-weight:500;color:#111111;">Carlos Cortes</span>
+              <span style="font-size:11px;font-weight:500;color:#111111;">Carlos Cortes (P)</span>
               <span class="batter-stat" style="font-family:'DM Mono',monospace;font-size:9px;color:#1B3A6B;margin-left:6px;">2-4 (1 RBI)</span>
             </div>
             
@@ -1605,7 +1608,7 @@
           <!-- Home insight -->
           <div style="margin-top:8px;padding-top:7px;border-top:1px solid #E0DDD6;">
             <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#1A6B3C;margin-bottom:3px;font-weight:700;">Insight</div>
-            <div style="font-size:11px;line-height:1.6;color:#111111;">Jeffrey Springs held San Francisco to 1 run over 6 innings but the Athletics offense couldn&#39;t give him any help in the 10-1 loss. The bullpen got shelled after Springs exited, turning this one into a rout.</div>
+            <div style="font-size:11px;line-height:1.6;color:#111111;">Jeffrey Springs held SF to just 1 run in 6 innings but the Athletics offense couldn&#39;t do anything with it, getting blown out 10-1. Oakland&#39;s offense has been a concern lately and tonight did nothing to help.</div>
           </div>
         </div>
 
@@ -1616,6 +1619,7 @@
 
     <!-- ROLLING TABLES -->
     <div style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;color:#111111;text-transform:uppercase;letter-spacing:1px;padding:22px 0 11px;border-bottom:2px solid #111111;margin-bottom:16px;" id="rankings">Rolling Performance Tables</div>
+    <div style="font-size:12px;color:#6B6860;margin-bottom:16px;line-height:1.6;font-style:italic;">On Mobile, Turn Phone Sideways to View Tables.</div>
 
     <!-- BULLPEN TABLE -->
     <div style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#111111;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Bullpen Rankings</div>
@@ -2840,7 +2844,7 @@
         <span style="font-weight:600;font-size:14px;">TB</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;" class="signal-badge">Fade</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: The Tampa Bay bullpen has been a disaster over the last week, allowing runs at an alarming rate and ranking near the bottom of the league. They&#39;ve also been blowing saves, converting less than half their chances. Avoid Tampa Bay in close games where the bullpen is likely to factor in.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: The Tampa Bay bullpen has been one of the worst in baseball over the last week, allowing runs at an alarming rate. They&#39;ve only converted about 4 out of 10 save chances, which is a real problem when games are close late.</div>
     </div>
     
     <div style="border-left:2px solid #C13B2A;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2848,7 +2852,7 @@
         <span style="font-weight:600;font-size:14px;">TEX</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;" class="signal-badge">Fade</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: The Texas bullpen has been giving up more runs than they probably should lately, even against easier competition. Their momentum is heading in the wrong direction and they&#39;ve been one of the weaker relief groups over the past two weeks. Fade Texas in games that figure to be competitive late.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: The Texas bullpen looks a lot worse recently than their season-long numbers suggest. They were ranked 9th over the last month but have fallen to 24th over the last week, even against easier competition.</div>
     </div>
     
     <div style="border-left:2px solid #C13B2A;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2856,7 +2860,7 @@
         <span style="font-weight:600;font-size:14px;">CLE</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;" class="signal-badge">Fade</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Cleveland&#39;s bullpen has been trending downward despite being solid over the past month. The last week has been noticeably worse, and the team&#39;s overall momentum is slipping. Fade the Guardians until their relief group gets back on track.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Cleveland&#39;s bullpen has been slipping lately after a strong stretch earlier in the season. They ranked 7th over the last month but have dropped to 20th over the past week, and the momentum is heading in the wrong direction.</div>
     </div>
     
     <div style="border-left:2px solid #1B3A6B;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2864,7 +2868,7 @@
         <span style="font-weight:600;font-size:14px;">SF</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#E8EDF5;color:#1B3A6B;" class="signal-badge">Value</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: The San Francisco bullpen has been outstanding this past week, barely allowing any runs and posting one of the best marks in baseball. They&#39;ve done it against tough competition, which makes it even more impressive. Back the Giants when their bullpen is in play this week.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: The San Francisco bullpen has been really sharp this past week, ranking 4th in the league while facing a tough schedule. Their WHIP of 0.70 over that stretch means they are barely letting anyone reach base.</div>
     </div>
     
     <div style="border-left:2px solid #1B3A6B;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2872,7 +2876,7 @@
         <span style="font-weight:600;font-size:14px;">COL</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#E8EDF5;color:#1B3A6B;" class="signal-badge">Value</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Colorado&#39;s starting pitchers have been getting lit up all season, ranking dead last in the league over both the past two weeks and the past month. They&#39;re walking too many hitters and giving up runs in bunches. Avoid betting on Colorado starters until something changes in a big way.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: Colorado&#39;s starters have been getting hit hard all season, ranking last over both the past two weeks and the past month. The positive momentum signal here is worth watching as a potential turning point, but there is a long way to go before trusting this group.</div>
     </div>
     
     <div style="border-left:2px solid #1B3A6B;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2880,7 +2884,7 @@
         <span style="font-weight:600;font-size:14px;">MIN</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#E8EDF5;color:#1B3A6B;" class="signal-badge">Value</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: Minnesota&#39;s starters have been really sharp lately, putting up a strong ERA this past week and keeping runners off base at a solid clip. The team&#39;s momentum is moving in the right direction too. Back the Twins when one of their starters is on the mound this week.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: Minnesota&#39;s starting pitchers have been on a nice run lately, sitting 13th this week after ranking 27th over the past month. They have a 1.00 WHIP over the last week, which means baserunners have been very hard to come by.</div>
     </div>
     
     <div style="border-left:2px solid #1B3A6B;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2888,7 +2892,7 @@
         <span style="font-weight:600;font-size:14px;">SD</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#E8EDF5;color:#1B3A6B;" class="signal-badge">Value</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: San Diego&#39;s rotation has been one of the better units in baseball over the past two weeks, consistently limiting damage and eating innings. The team is also on a positive run with good momentum behind them. Back the Padres when their starters take the mound this week.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: San Diego&#39;s rotation has quietly been one of the better units in baseball over the past two weeks, ranking 7th and 8th in those windows. After a rough stretch a month ago they appear to be finding their footing again.</div>
     </div>
     
     <div style="border-left:2px solid #C13B2A;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2896,7 +2900,7 @@
         <span style="font-weight:600;font-size:14px;">TB</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;" class="signal-badge">Fade</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Tampa Bay&#39;s starters have actually been pitching well this week and over the past month, ranking among the better rotations in the game. However, the team&#39;s overall momentum is sliding, which could weigh on results. Watch this one carefully — the starters are solid but the situation around them is shaky.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Tampa Bay&#39;s starters have put up great numbers recently and rank among the best over the last month. However, their ERA looks better than how they are actually pitching, so the strong results may not hold up much longer.</div>
     </div>
     
     <div style="border-left:2px solid #C13B2A;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2904,7 +2908,7 @@
         <span style="font-weight:600;font-size:14px;">ATL</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;" class="signal-badge">Fade</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Atlanta&#39;s offense has been underwhelming, scoring fewer than four runs a game and hitting below average even against easier pitching. The team&#39;s momentum has dropped sharply and things aren&#39;t clicking at the plate right now. Fade the Braves offensively until they show signs of life.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">FADE: Atlanta&#39;s offense has cooled off significantly despite a relatively easy schedule. They are only scoring 3.67 runs per game and their overall production numbers are below average for a team with this much talent.</div>
     </div>
     
     <div style="border-left:2px solid #1B3A6B;padding:10px 16px;margin-bottom:10px;background:#FFFFFF;">
@@ -2912,7 +2916,7 @@
         <span style="font-weight:600;font-size:14px;">MIA</span>
         <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#E8EDF5;color:#1B3A6B;" class="signal-badge">Value</span>
       </div>
-      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: Miami&#39;s offense has been trending upward lately, scoring over four runs a game and climbing in the rankings over the past two weeks. They&#39;ve done it while facing tougher pitching, which is a good sign. Keep an eye on the Marlins — their bats are starting to come alive at a good time.</div>
+      <div style="font-size:12px;line-height:1.7;color:#111111;">VALUE: Miami&#39;s offense has been picking up steam recently, moving from 23rd over the last month to 14th over the last two weeks against tough competition. They are scoring over 4 runs a game in that recent stretch, which is a quiet improvement worth noting.</div>
     </div>
     
     
@@ -2981,6 +2985,14 @@
         </tr>
         
         <tr style="border-bottom:1px solid #E0DDD6;">
+          <td style="padding:7px 9px;font-weight:500;">Ryan O&#39;Hearn</td>
+          <td style="padding:7px 9px;font-family:'DM Mono',monospace;font-size:10px;">PIT</td>
+          <td style="padding:7px 9px;"><span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span></td>
+          <td style="padding:7px 9px;font-size:11px;color:#6B6860;">10-day IL — Right quad muscle strain</td>
+          <td style="padding:7px 9px;font-size:11px;">Pittsburgh Pirates placed RF Ryan O&#39;Hearn on the 10-day injured list. Right quad muscle strain.</td>
+        </tr>
+        
+        <tr style="border-bottom:1px solid #E0DDD6;">
           <td style="padding:7px 9px;font-weight:500;">Brendan Donovan</td>
           <td style="padding:7px 9px;font-family:'DM Mono',monospace;font-size:10px;">SEA</td>
           <td style="padding:7px 9px;"><span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span></td>
@@ -2994,14 +3006,6 @@
           <td style="padding:7px 9px;"><span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#fde8e8;color:#8a1a1a;">60-day IL</span></td>
           <td style="padding:7px 9px;font-size:11px;color:#6B6860;">60-day IL — Right triceps inflammation</td>
           <td style="padding:7px 9px;font-size:11px;">Chicago Cubs transferred RHP Hunter Harvey from the 15-day injured list to the 60-day injured list. Right triceps inflammation.</td>
-        </tr>
-        
-        <tr style="border-bottom:1px solid #E0DDD6;">
-          <td style="padding:7px 9px;font-weight:500;">Ryan O&#39;Hearn</td>
-          <td style="padding:7px 9px;font-family:'DM Mono',monospace;font-size:10px;">PIT</td>
-          <td style="padding:7px 9px;"><span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span></td>
-          <td style="padding:7px 9px;font-size:11px;color:#6B6860;">10-day IL — Right quad muscle strain</td>
-          <td style="padding:7px 9px;font-size:11px;">Pittsburgh Pirates placed RF Ryan O&#39;Hearn on the 10-day injured list. Right quad muscle strain.</td>
         </tr>
         
         
@@ -3111,6 +3115,25 @@
       <div style="border:1px solid #E0DDD6;margin-bottom:8px;background:#FFFFFF;">
         <!-- Row 1: name, team, status -->
         <div style="display:flex;align-items:center;gap:8px;padding:9px 11px 7px;border-bottom:1px solid #F0EDE6;flex-wrap:wrap;">
+          <span style="font-weight:600;font-size:13px;flex:1;min-width:0;">Ryan O&#39;Hearn</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:#6B6860;flex-shrink:0;">PIT</span>
+          <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span>
+        </div>
+        <!-- Row 2: injury type -->
+        <div style="padding:6px 11px;border-bottom:1px solid #F0EDE6;">
+          <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#9B9890;margin-bottom:2px;">Injury</div>
+          <div style="font-size:12px;color:#6B6860;">10-day IL — Right quad muscle strain</div>
+        </div>
+        <!-- Row 3: impact -->
+        <div style="padding:6px 11px 9px;">
+          <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#9B9890;margin-bottom:2px;">Impact</div>
+          <div style="font-size:12px;color:#111111;line-height:1.5;">Pittsburgh Pirates placed RF Ryan O&#39;Hearn on the 10-day injured list. Right quad muscle strain.</div>
+        </div>
+      </div>
+      
+      <div style="border:1px solid #E0DDD6;margin-bottom:8px;background:#FFFFFF;">
+        <!-- Row 1: name, team, status -->
+        <div style="display:flex;align-items:center;gap:8px;padding:9px 11px 7px;border-bottom:1px solid #F0EDE6;flex-wrap:wrap;">
           <span style="font-weight:600;font-size:13px;flex:1;min-width:0;">Brendan Donovan</span>
           <span style="font-family:'DM Mono',monospace;font-size:10px;color:#6B6860;flex-shrink:0;">SEA</span>
           <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span>
@@ -3146,25 +3169,6 @@
         </div>
       </div>
       
-      <div style="border:1px solid #E0DDD6;margin-bottom:8px;background:#FFFFFF;">
-        <!-- Row 1: name, team, status -->
-        <div style="display:flex;align-items:center;gap:8px;padding:9px 11px 7px;border-bottom:1px solid #F0EDE6;flex-wrap:wrap;">
-          <span style="font-weight:600;font-size:13px;flex:1;min-width:0;">Ryan O&#39;Hearn</span>
-          <span style="font-family:'DM Mono',monospace;font-size:10px;color:#6B6860;flex-shrink:0;">PIT</span>
-          <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;display:inline-block;background:#F5EAE8;color:#C13B2A;">10-day IL</span>
-        </div>
-        <!-- Row 2: injury type -->
-        <div style="padding:6px 11px;border-bottom:1px solid #F0EDE6;">
-          <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#9B9890;margin-bottom:2px;">Injury</div>
-          <div style="font-size:12px;color:#6B6860;">10-day IL — Right quad muscle strain</div>
-        </div>
-        <!-- Row 3: impact -->
-        <div style="padding:6px 11px 9px;">
-          <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#9B9890;margin-bottom:2px;">Impact</div>
-          <div style="font-size:12px;color:#111111;line-height:1.5;">Pittsburgh Pirates placed RF Ryan O&#39;Hearn on the 10-day injured list. Right quad muscle strain.</div>
-        </div>
-      </div>
-      
       
     </div><!-- /injury-cards-mobile -->
 
@@ -3173,7 +3177,7 @@
     <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6B6860;margin-bottom:8px;">Activated from IL</div>
     
     <div style="background:#E8F2EC;border-left:2px solid #1A6B3C;padding:7px 13px;margin-bottom:6px;font-size:12px;">
-      <strong>DET</strong>: Will Vest — activated from IL
+      <strong>LAA</strong>: Grayson Rodriguez — activated from IL
     </div>
     
     <div style="background:#E8F2EC;border-left:2px solid #1A6B3C;padding:7px 13px;margin-bottom:6px;font-size:12px;">
@@ -3185,7 +3189,7 @@
     </div>
     
     <div style="background:#E8F2EC;border-left:2px solid #1A6B3C;padding:7px 13px;margin-bottom:6px;font-size:12px;">
-      <strong>LAA</strong>: Grayson Rodriguez — activated from IL
+      <strong>DET</strong>: Will Vest — activated from IL
     </div>
     
     <br>
@@ -3222,12 +3226,12 @@
     <div style="background:#EFECE6;border:1px solid #E0DDD6;padding:15px 18px;margin-bottom:24px;">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#6B6860;margin-bottom:8px;">Methodology</div>
       <div style="font-size:11px;line-height:1.9;color:#6B6860;">
-        <div><strong style="color:#111111;">Rolling windows</strong> — 7, 14, and 28-day stats from completed games only. Postponed games excluded.</div>
-        <div><strong style="color:#111111;">Momentum</strong> — rank_28d - rank_7d. Positive = outperforming recent baseline. Negative = declining.</div>
-        <div><strong style="color:#111111;">Schedule strength</strong> — Value on Hard schedule is stronger.</div>
-        <div><strong style="color:#111111;">ERA-FIP gap</strong> — ERA minus FIP. Gap over 1.0 = ERA likely to regress down (unlucky). Under -1.0 = may regress up.</div>
-        <div><strong style="color:#111111;">Signals</strong> — Value = momentum +5 or more on Avg/Hard. Fade = -5 or worse on Easy/Avg.</div>
-        <div style="margin-top:4px;color:#9B9890;font-size:10px;">Straight rolling ERA with no leverage weighting.</div>
+        <div><strong style="color:#111111;">Rolling windows:</strong> 7, 14,28 day stats from completed games only. Postponed games excluded.</div>
+        <div><strong style="color:#111111;">Momentum:</strong> 28d - 7d. Positive = outperforming. Negative = declining.</div>
+        <div><strong style="color:#111111;">Schedule strength:</strong> Value on Hard schedule is stronger.</div>
+        <div><strong style="color:#111111;">ERA-FIP Gap:</strong> If FIP is less than ERA, then ERA will likely get better.</div>
+        <div><strong style="color:#111111;">Signals:</strong> Value = momentum +5 or more on Avg/Hard. Fade = -5 or worse on Easy/Avg.</div>
+        <div style="margin-top:4px;color:#9B9890;font-size:10px;">Straight rolling ERA with no weighting.</div>
       </div>
     </div>
 
@@ -3235,7 +3239,7 @@
 
   <!-- DISCLAIMER -->
   <div class="disclaimer-pad" style="background:#EFECE6;border-top:1px solid #E0DDD6;padding:14px 32px;font-family:'DM Mono',monospace;font-size:9px;color:#6B6860;line-height:1.7;text-align:center;">
-    Compass publishes statistical analysis and insights for informational purposes only. Nothing in this newsletter constitutes betting advice.
+    Compass is for informational purposes only. Nothing in this newsletter constitutes betting advice.
   </div>
 
   <!-- FOOTER -->
